@@ -1,4 +1,4 @@
-# grok
+# groker
 
 Simple library to parse grok patterns with go.
 
@@ -7,11 +7,11 @@ This small tool reads from standard input, applies a grok pattern and dumps the 
 ## Examples
 
 ```bash
-cat apache.log | grok -pattern=%{COMMONAPACHELOG}
+cat apache.log | groker -pattern=%{COMMONAPACHELOG}
 ```
 
 ```bash
-echo "Hello 123" | grok -pattern="%{WORD:word} %{WORD:number}"
+echo "Hello 123" | groker -pattern="%{WORD:word} %{WORD:number}"
 // output: {"number":"123","word":"Hello"}
 ```
 
